@@ -26,6 +26,7 @@
 		-moz-backface-visibility: hidden;
 		-o-backface-visibility: hidden;
 		backface-visibility: hidden;
+		background: white;
 	  }
 	  
 	  div[class^="back-"] {
@@ -69,9 +70,15 @@
 			  <div class="card-body">
 				<h5 class="card-title">UAT</h5>
 				<p class="card-text">These are the tasks that are released to UAT onsite.</p>
-				
-				<input type="text" class="input-sm" />
-				<button class="btn btn-info" onclick="flip('uat')">Add!</button>
+				<hr />
+				<form>
+				  <div class="form-group">
+					<label for="taskName">Task Name</label>
+					<input type="text" class="form-control" id="taskName" aria-describedby="taskHelp" placeholder="Enter Task Name">
+					<small id="taskHelp" class="form-text text-muted">This task will be added to the UAT released project list.</small>
+				  </div>
+				  <button type="button" class="btn btn-primary" onclick="flip('uat')" >Add!</button>
+				</form>
 				
 			  </div>
 			</div>
@@ -101,8 +108,14 @@
 				<h5 class="card-title">BETA</h5>
 				<p class="card-text">These are the tasks that are passed from UAT and released to BETA onsite.</p>
 				
-				<input type="text" class="input-sm" />
-				<button class="btn btn-info" onclick="flip('beta')">Add!</button>
+				<form>
+				  <div class="form-group">
+					<label for="taskName">Task Name</label>
+					<input type="text" class="form-control" id="taskName" aria-describedby="taskHelp" placeholder="Enter Task Name">
+					<small id="taskHelp" class="form-text text-muted">This task will be added to the BETA released project list.</small>
+				  </div>
+				  <button type="button" class="btn btn-primary" onclick="flip('beta')" >Add!</button>
+				</form>
 				
 			  </div>
 			</div>
@@ -132,8 +145,14 @@
 				<h5 class="card-title">Production</h5>
 				<p class="card-text">These are the tasks that are passed from UAT & BETA and released to Production.</p>
 				
-				<input type="text" class="input-sm" />
-				<button class="btn btn-info" onclick="flip('prod')">Add!</button>
+				<form>
+				  <div class="form-group">
+					<label for="taskName">Task Name</label>
+					<input type="text" class="form-control" id="taskName" aria-describedby="taskHelp" placeholder="Enter Task Name">
+					<small id="taskHelp" class="form-text text-muted">This task will be added to the LIVE released project list.</small>
+				  </div>
+				  <button type="button" class="btn btn-primary" onclick="flip('prod')" >Add!</button>
+				</form>
 				
 			  </div>
 			</div>
